@@ -221,3 +221,14 @@ dmypy.json
 
 testlog/
 log/
+
+# Local tooling / test artifacts
+.pytest_cache/
+.mypy_cache/
+.tox/
+htmlcov/
+.coverage
+coverage.xml
+dist/
+build/
+*.egg-info/
