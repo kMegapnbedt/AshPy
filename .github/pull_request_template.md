@@ -52,3 +52,6 @@ List any dependencies that are required for this change.
 - [ ] I have added tests that prove my fix is effective or that my feature works
 - [ ] New and existing unit tests pass locally with my changes
 - [ ] Any dependent changes have been merged and published in downstream modules
+
+- [ ] `python -m pytest` passes locally
+- [ ] `black --check .` and `flake8` are clean for touched files
