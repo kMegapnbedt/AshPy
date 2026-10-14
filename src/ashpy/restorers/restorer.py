@@ -102,12 +102,11 @@ class Restorer:
 
     @staticmethod
     def _validate_placeholder(placeholder: List, placeholder_type):
-        # We do a preliminary check on types since the error thrown by TF can be hard to parse.
-        try:
-            assert isinstance(placeholder, placeholder_type)
-        except AssertionError:
+        # Explicit check instead of `assert`: assertions are stripped under `python -O`,
+        # and this contract has to hold in optimized training containers too.
+        if not isinstance(placeholder, placeholder_type):
             raise TypeError(
-                f"Object {placeholder} is should be of type: {placeholder_type}"
+                f"Object {placeholder} should be of type: {placeholder_type}"
             )
 
     @staticmethod
@@ -166,7 +165,7 @@ class Restorer:
         return placeholder
 
     def get_steps_per_epoch(self) -> tf.Variable:
-        """Return the restored global_step."""
+        """Return the restored steps_per_epoch."""
         placeholder = tf.Variable(
             -1, name="steps_per_epoch", trainable=False, dtype=tf.int64
         )
