@@ -99,3 +99,15 @@ tox -e docs
 
 ## Attribution
 This Contributing file is adapted from the TensorFlow Contributing available at https://github.com/tensorflow/tensorflow/blob/master/CONTRIBUTING.md
+
+## Development setup
+
+```bash
+python -m venv .venv && . .venv/bin/activate
+pip install -e .
+pip install -r requirements/test.txt
+pip install -r requirements/linting.txt
+```
+
+Run `python -m pytest` for the suite and `black`/`flake8`/`pylint` before pushing;
+CI is not required to review, but a green local run speeds it up.

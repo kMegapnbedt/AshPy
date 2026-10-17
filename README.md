@@ -466,3 +466,21 @@ In order to run the tests (with the doctests), linting and docs generation simpl
 ```bash
 tox
 ```
+
+## Examples
+
+Six runnable scripts live in [`examples/`](examples/README.md): a multi-GPU
+classifier, the prebuilt UNet, and four GAN variants (MNIST, BiGAN, pix2pix and a
+multi-GPU pix2pix).
+
+## Local checks
+
+```bash
+python -m pytest
+black --check .
+flake8
+```
+
+Restoration note: models must be built (called on a sample input) before
+`Restorer` will accept them; the restorer raises `ModelNotConstructedError`
+otherwise and validates placeholder types up front.
