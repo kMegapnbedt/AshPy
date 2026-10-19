@@ -118,8 +118,10 @@ class Restorer:
         without being properly constructed AKA called on some input, will have empty lists
         as layers.weights.
 
-        TODO: add docs for the exception.
-        TODO: add test case for the Sequential without input shape
+        Raises:
+            ModelNotConstructedError: if the model exposes no weights yet, i.e. a
+                sub-classed model that was never called on an input, or a Sequential
+                built without an input shape.
         """
         try:
             if restored_model.weights == []:
