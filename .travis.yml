@@ -1,3 +1,6 @@
+# Travis CI (travis-ci.org) was retired in 2021; this file is kept as a
+# record of the historical build matrix. Active checks run locally via tox
+# and the commands in CONTRIBUTING.md.
 dist: xenial
 language: python
 addons:

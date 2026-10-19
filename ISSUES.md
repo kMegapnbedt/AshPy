@@ -17,3 +17,7 @@ We adopted the same guidelines as for the TensorFlow project.
 ### Attribution
 
 This Issues Rules is adapted from the https://github.com/tensorflow/tensorflow/blob/master/ISSUES.md file of the [TensorFlow]: https://github.com/tensorflow/tensorflow project.
+
+All four categories have matching templates under
+`.github/ISSUE_TEMPLATE/` - pick the closest one so the report carries the details a
+maintainer needs (version, output, minimal reproduction).
