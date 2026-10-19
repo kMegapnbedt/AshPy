@@ -6,7 +6,7 @@
 #
 -e git+https://github.com/thisch/pytest-sphinx.git#egg=pytest-sphinx
 attrs==19.3.0             # via pytest
-certifi==2019.11.28       # via requests
+certifi==2026.7.22       # via requests
 chardet==3.0.4            # via requests
 codecov==2.0.15
 coverage==5.0.3           # via codecov, pytest-cov
