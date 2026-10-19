@@ -5,7 +5,7 @@
 #    pip-compile --output-file=./requirements/dev.txt --pre ./requirements.in/dev.txt
 #
 -e git+https://github.com/thisch/pytest-sphinx.git#egg=pytest-sphinx
-absl-py==0.9.0            # via tensorboard, tensorflow
+absl-py==2.5.1            # via tensorboard, tensorflow
 alabaster==0.7.12         # via sphinx
 appdirs==1.4.3            # via black
 argh==0.26.2              # via sphinx-autobuild, watchdog
